@@ -1,0 +1,16 @@
+{
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Login",
+      "required": "{{field}} is required"
+    },
+    "dashboard": {
+      "welcome": "Welcome, {{name}}!"
+    },
+    "common": {
+      "logout": "Logout"
+    }
+  }
+  
