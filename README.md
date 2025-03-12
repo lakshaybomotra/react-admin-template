@@ -60,7 +60,7 @@ src/
 ### 1. Clone the template
 
 ```bash
-npx degit your-username/react-admin-template my-app
+npx degit lakshaybomotra/react-admin-template my-app
 cd my-app
 ```
 
