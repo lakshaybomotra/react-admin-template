@@ -41,10 +41,9 @@ src/
 ├── features/           # Feature modules (users, dashboard, etc.)
 ├── hooks/              # Custom React hooks
 ├── layouts/            # FullLayout, BlankLayout
-├── pages/              # Login, Dashboard
 ├── routes/             # AppRoutes, ProtectedRoute
 ├── services/           # Axios instance
-├── store/              # Redux setup (slices + sagas)
+├── store/              # Redux setup
 ├── theme/              # Light/dark theme tokens
 ├── translations/       # i18n language files
 ├── utils/              # Helpers like toast.js
@@ -92,7 +91,7 @@ No real backend needed — replace `loginApi` inside `authSlice.js` when ready.
 ## 🔄 Customize
 
 - Update `theme/theme.js` for custom branding
-- Add pages inside `pages/` and routes inside `AppRoutes.jsx`
+- Add features inside `features/` and routes inside `AppRoutes.jsx`
 - Translate strings via `translations/en/translation.json`
 - Add your API base URL in `.env` file:
   ```env
