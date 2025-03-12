@@ -8,9 +8,14 @@ const api = axios.create({
   timeout: 10000,
 })
 
+const getToken = () => {
+  const storedAuth = localStorage.getItem('auth')
+  return storedAuth ? JSON.parse(storedAuth).token : null
+}
+
 api.interceptors.request.use(
   (config) => {
-    const token = store.getState().auth.token
+    const token = getToken() || store.getState().auth.token
     if (token) {
       config.headers.Authorization = `Bearer ${token}`
     }

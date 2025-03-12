@@ -2,10 +2,11 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { Button, Form, Input, Typography, Spin } from 'antd'
-import { useThemeTokens } from '../App'
-import { loginRequest } from '../store/auth/authSlice'
+import { Form, Input, Typography, Spin } from 'antd'
+import { useThemeTokens } from '../../App'
+import { loginRequest } from './authSlice'
 import { useTranslation } from 'react-i18next'
+import AppButton from '../../components/ui/AppButton'
 
 const { Title } = Typography
 
@@ -52,7 +53,7 @@ const Login = () => {
         }}
       >
         <Title level={3} style={{ color: colorTextBase, textAlign: 'center' }}>
-            {t('login.title')}
+          {t('login.title')}
         </Title>
         <Form
           layout="vertical"
@@ -75,14 +76,14 @@ const Login = () => {
           </Form.Item>
 
           <Form.Item>
-            <Button
-              type="primary"
+            <AppButton
+              type='primary'
               block
               onClick={onFinish}
               disabled={loading}
             >
               {loading ? <Spin size="small" /> : 'Login'}
-            </Button>
+            </AppButton>
           </Form.Item>
         </Form>
       </div>

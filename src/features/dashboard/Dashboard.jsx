@@ -1,17 +1,17 @@
 import React from 'react'
-import { Button, Typography } from 'antd'
+import { Typography } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
-import { logout } from '../store/auth/authSlice'
+import { logout } from '../auth/authSlice'
 import { useNavigate } from 'react-router-dom'
-import { useThemeTokens } from '../App'
-import { useTranslation } from 'react-i18next'
+import { useThemeTokens } from '../../App'
+import AppButton from '../../components/ui/AppButton'
+import PageHeader from '../../components/ui/PageHeader'
 
 const { Title } = Typography
 
 const Dashboard = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { t } = useTranslation()
     const { user } = useSelector((state) => state.auth)
     const { colorTextBase, padding, colorBgBase } = useThemeTokens()
 
@@ -26,15 +26,16 @@ const Dashboard = () => {
                 padding,
                 color: colorTextBase,
                 background: colorBgBase,
-                minHeight: '100vh',
+                // minHeight: '100vh',
             }}
         >
-            <Title level={2} style={{ color: colorTextBase }}>
-                {t('dashboard.welcome', { name: user.name })}
-            </Title>
-            <Button type="primary" onClick={handleLogout}>
-                {t('common.logout')}
-            </Button>
+            <PageHeader
+                title={`Welcome, ${user.name}`}
+                subtitle="Manage all system users"
+            />
+
+            <AppButton onClick={handleLogout}>Logout</AppButton>
+
         </div>
     )
 }

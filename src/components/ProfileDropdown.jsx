@@ -3,7 +3,7 @@ import { Dropdown, Menu, Avatar } from 'antd'
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { logout } from '../store/auth/authSlice'
+import { logout } from '../features/auth/authSlice'
 import { useThemeTokens } from '../App'
 
 const ProfileDropdown = () => {

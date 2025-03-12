@@ -5,8 +5,8 @@ import FullLayout from '../layouts/FullLayout'
 import BlankLayout from '../layouts/BlankLayout'
 import ProtectedRoute from './ProtectedRoute'
 
-import Dashboard from '../pages/Dashboard'
-import Login from '../pages/Login'
+import Dashboard from '../features/dashboard/Dashboard'
+import Login from '../features/auth/Login'
 
 const AppRoutes = () => {
   return (
